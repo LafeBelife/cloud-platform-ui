@@ -21,13 +21,22 @@ import errLog from 'store/errLog';// error log组件
 import './mock/index.js';  // 该项目所有请求使用mockjs模拟
 import { getToken } from 'utils/auth';
 import 'babel-polyfill';//支持IE执行原生script
+import VueParticles from 'vue-particles';
+
 
 // register globally
 Vue.component('multiselect', Multiselect);
 Vue.component('Sticky', Sticky);
-Vue.component('icon-svg', IconSvg)
+Vue.component('icon-svg', IconSvg);
+const req = require.context('./icons/svg', false, /\.svg$/);
+const requireAll = requireContext => requireContext.keys().map(requireContext);
+requireAll(req);
+
+Vue.use(VueParticles);
 Vue.use(ElementUI);
 Vue.use(vueWaves);
+
+
 
 // register global utility filters.
 Object.keys(filters).forEach(key => {
