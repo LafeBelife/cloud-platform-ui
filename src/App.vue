@@ -52,7 +52,7 @@
 
   #particles-js {
     /*background-color: #2d3a4b;*/
-    background-image: url("assets/login/星空背景.jpg");
+    background-image: url("assets/login/starred_hotel.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
